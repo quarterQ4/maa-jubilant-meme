@@ -137,3 +137,9 @@ Win10 或者 Win11 系统自带了一份 "Python"，但它其实只是一个安�
 感谢以下开发者对本项目作出的贡献（下面链接改成你自己的项目地址）:
 
 [![Contributors](https://contrib.rocks/image?repo=MaaXYZ/MaaFramework&max=1000)](https://github.com/MaaXYZ/MaaFramework/graphs/contributors)
+
+## 以下来自复制项目
+
+这是一个基于MaaFW的测试项目, 功能是给碧蓝航线游戏自动上装备, 以节约装备仓库空间. 使用前需进入页面开启快速更换, 并关闭装备中显示.
+
+目前问题: 当同时出现两个空装备槽均没有可用装备时, 程序会在两个槽间反复切换, 不切换到下一个角色.

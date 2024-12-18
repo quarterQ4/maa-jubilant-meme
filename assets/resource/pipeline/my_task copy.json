@@ -1,0 +1,29 @@
+{
+    "点击空装备槽": {
+        "recognition": "TemplateMatch",
+        "template": "空装备槽.png",
+        "threshold": 0.9,
+        "action": "Click",
+        "next": "点击装备"
+    },
+    "点击装备": {
+        "recognition": "DirectHit",
+        "action": "Click",
+        "target": [828, 334, 10, 10],
+        "next": [
+            "点击空装备槽",
+            "切换下一个角色"
+        ]
+    },
+    "切换下一个角色": {
+        "recognition": "DirectHit",
+        "action": "Swipe",
+        "begin": [567, 337, 10, 10],
+        "end": [392, 337, 10, 10],
+        "next": [
+            "点击空装备槽",
+            "切换下一个角色"
+        ],
+        "post_delay": 1000
+    }
+}
