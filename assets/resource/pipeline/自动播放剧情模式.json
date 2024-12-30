@@ -1,0 +1,46 @@
+{
+    "自动播放剧情模式开始任务": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "next": ["点击剧情图标", "点击战斗图标"]
+    },
+    "点击剧情图标": {
+        "recognition": "TemplateMatch",
+        "template": "剧情按钮.png",
+        "threshold": 0.7,
+        "order_by": "Score",
+        "action": "Click",
+        "next": ["点击跳过剧情", "点击剧情图标", "点击战斗图标"],
+        "post_delay": 1000
+    },
+    "点击跳过剧情": {
+        "recognition": "TemplateMatch",
+        "template": "跳过按钮.png",
+        "order_by": "Score",
+        "threshold": 0.7,
+        "action": "Click",
+        "next": "点击确定跳过剧情",
+        "post_delay": 1000
+    },
+    "点击确定跳过剧情": {
+        "recognition": "TemplateMatch",
+        "template": "确定跳过按钮.png",
+        "order_by": "Score",
+        "threshold": 0.7,
+        "action": "Click",
+        "next": ["点击跳过剧情", "点击剧情图标", "点击战斗图标"],
+        "post_delay": 1000
+    },
+    "点击战斗图标": {
+        "recognition": "TemplateMatch",
+        "template": "战斗按钮.png",
+        "order_by": "Score",
+        "threshold": 0.7,
+        "action": "Click",
+        "next": ["点击跳过剧情", "点击剧情图标", "点击战斗图标"],
+        "post_delay": 100000
+    },
+    "记录问题的空白任务": {
+        "template": "切入战斗时前面的剧情图标还有, 按照顺序总会优先处理一个; 进入战斗后还要设法支持跳过剧情和等待战斗结束"
+    }
+}
